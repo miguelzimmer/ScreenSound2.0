@@ -14,7 +14,7 @@ internal class MenuRegistrarBanda : Menu
         Banda banda = new Banda(nomeDaBanda);
         bandasRegistradas.Add(nomeDaBanda, banda);
 
-        var client = new OpenAIAPI("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");
+        var client = new OpenAIAPI("");
         var chat = client.Chat.CreateConversation();
         chat.AppendSystemMessage($"Resuma a banda {nomeDaBanda} em 1 parágrafo. Adote um estilo informal.");
         string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
